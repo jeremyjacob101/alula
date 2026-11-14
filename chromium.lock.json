@@ -1,0 +1,8 @@
+{
+  "version": "158.0.8127.37",
+  "revision": "b8c2be851f62f6a394ec57955d7f31335d7cb6d4",
+  "repository": "https://chromium.googlesource.com/chromium/src.git",
+  "depot_tools_repository": "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
+  "depot_tools_revision": "97da8489e4b7e9dc78fa2efb846871a7b423d933",
+  "patch_commit": "4b969efc98ab492efc648af39be026d6de5e8a7c"
+}

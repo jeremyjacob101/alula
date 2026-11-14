@@ -1,0 +1,2 @@
+# Preserve patch context whitespace and exact bytes.
+*.patch -text -whitespace

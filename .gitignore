@@ -1,0 +1,23 @@
+# Only project-owned source is published. Chromium stays local.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE.chromium
+!/chromium.lock.json
+!/build_alula.py
+!/config/
+!/patches/
+!/scripts/
+!/alula/
+!/docs/
+
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+*.app/
+*.dmg
+*.zip
+*.log
