@@ -3,6 +3,8 @@
 A macOS browser project based on Chromium. Current customization: lowercase
 **alula** app/product branding, including About and Settings text. The current
 development build has been compiled and manually tested locally on Apple M5.
+The follow-up common-UI branding pass has passed resource validation; see
+[branding scope and checks](docs/branding.md) for details and remaining limits.
 Sidebar/workspaces and a native Swift bridge are future work.
 
 This repository contains alula-owned source, Chromium patches, version pins,

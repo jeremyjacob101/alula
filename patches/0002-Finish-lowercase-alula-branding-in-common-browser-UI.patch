@@ -1,0 +1,1287 @@
+From f0cff0463611f121b84759748d4feb1b5c14d9f8 Mon Sep 17 00:00:00 2001
+From: Jeremy Jacob <jeremyjacob101@gmail.com>
+Date: Sat, 14 Nov 2026 18:50:13 +0200
+Subject: [PATCH 2/2] Finish lowercase alula branding in common browser UI
+
+---
+ chrome/app/certificate_manager.grdp           |   2 +-
+ chrome/app/chromium_strings.grd               |  20 +--
+ chrome/app/extensions_strings.grdp            |   6 +-
+ chrome/app/generated_resources.grd            | 148 +++++++++---------
+ chrome/app/password_manager_ui_strings.grdp   |  20 +--
+ chrome/app/profiles_strings.grdp              |   4 +-
+ chrome/app/settings_strings.grdp              |  50 +++---
+ chrome/app/shared_settings_strings.grdp       |   8 +-
+ .../accessibility/accessibility.html          |  14 +-
+ .../bluetooth_internals.html                  |   8 +-
+ components/components_chromium_strings.grd    |  18 +--
+ 11 files changed, 149 insertions(+), 149 deletions(-)
+
+diff --git a/chrome/app/certificate_manager.grdp b/chrome/app/certificate_manager.grdp
+index 080b180c42..8bdb602372 100644
+--- a/chrome/app/certificate_manager.grdp
++++ b/chrome/app/certificate_manager.grdp
+@@ -160,7 +160,7 @@
+       </message>
+     </if>
+     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_DELETE_SERVER_CERT_DESCRIPTION" desc="Contents of certificate manager dialog confirming deletion of a server certificate.">
+-        If you delete a server certificate, Chrome will no longer use it to identify servers.
++        If you delete a server certificate, alula will no longer use it to identify servers.
+     </message>
+     <message name="IDS_SETTINGS_CERTIFICATE_MANAGER_V2_READ_FILE_ERROR" desc="Eror message displayed in certificate manager when the user tried to import a certificate but the file could not be read.">
+       Error reading file
+diff --git a/chrome/app/chromium_strings.grd b/chrome/app/chromium_strings.grd
+index 32cbb516e1..7625f89e14 100644
+--- a/chrome/app/chromium_strings.grd
++++ b/chrome/app/chromium_strings.grd
+@@ -2114,7 +2114,7 @@ alula is unable to recover your settings.
+           You can pin Google Search in side panel to ask questions as you browse
+         </message>
+         <message name="IDS_SIDE_PANEL_CONTEXTUAL_TASKS_PINNABLE_IPH_IN_CHROME" desc="The body text of the IPH describing that the Contextual Tasks side panel is pinnable.">
+-          You can pin Google Search in Chrome to ask questions as you browse
++          You can pin Google Search in alula to ask questions as you browse
+         </message>
+         <message name="IDS_SIDE_PANEL_CONTEXTUAL_TASKS_PINNABLE_IPH_PANEL" desc="The body text of the IPH describing that the Contextual Tasks side panel is pinnable.">
+           You can pin Google Search panel to ask questions as you browse
+@@ -2132,7 +2132,7 @@ alula is unable to recover your settings.
+           You can reopen Google Search in side panel to ask questions while you browse
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_TOOLBAR_BUTTON_IPH_IN_CHROME" desc="The body text of the IPH describing that the Contextual Tasks ephemeral toolbar button can be used to reopen Google Search in Chrome.">
+-          You can reopen Google Search in Chrome to ask questions while you browse
++          You can reopen Google Search in alula to ask questions while you browse
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_TOOLBAR_BUTTON_IPH_PANEL" desc="The body text of the IPH describing that the Contextual Tasks ephemeral toolbar button can be used to reopen Google Search panel.">
+           You can reopen Google Search panel to ask questions while you browse
+@@ -2155,7 +2155,7 @@ alula is unable to recover your settings.
+         <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_TOOLBAR_BUTTON_IPH_SCREENREADER_IN_CHROME"
+           desc="The screen reader text of the IPH describing that the Contextual Tasks ephemeral toolbar button can be used to reopen Google Search in Chrome."
+           is_accessibility_with_no_ui="true">
+-          From the "Google Search in Chrome" button on the toolbar, you can reopen Google Search in Chrome to ask questions while you browse
++          From the "Google Search in alula" button on the toolbar, you can reopen Google Search in alula to ask questions while you browse
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_TOOLBAR_BUTTON_IPH_SCREENREADER_PANEL"
+           desc="The screen reader text of the IPH describing that the Contextual Tasks ephemeral toolbar button can be used to reopen Google Search panel."
+@@ -2172,7 +2172,7 @@ alula is unable to recover your settings.
+           New icon, same shortcut: Click to ask questions as you browse with Google Search in side panel.
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_PINNED_ICON_CHANGED_IPH_IN_CHROME" desc="The body text of the one-time toast IPH informing users who previously pinned the Google Search in Chrome shortcut that its toolbar icon has been updated.">
+-          New icon, same shortcut: Click to ask questions as you browse with Google Search in Chrome.
++          New icon, same shortcut: Click to ask questions as you browse with Google Search in alula.
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_PINNED_ICON_CHANGED_IPH_PANEL" desc="The body text of the one-time toast IPH informing users who previously pinned the Google Search panel shortcut that its toolbar icon has been updated.">
+           New icon, same shortcut: Click to ask questions as you browse with Google Search panel.
+@@ -2195,7 +2195,7 @@ alula is unable to recover your settings.
+         <message name="IDS_CONTEXTUAL_TASKS_PINNED_ICON_CHANGED_IPH_SCREENREADER_IN_CHROME"
+           desc="The screen reader text of the one-time toast IPH informing users who previously pinned the Google Search in Chrome shortcut that its toolbar icon has been updated."
+           is_accessibility_with_no_ui="true">
+-          The "Google Search in Chrome" button on the toolbar has a new icon. Click it to ask questions as you browse with Google Search in Chrome.
++          The "Google Search in alula" button on the toolbar has a new icon. Click it to ask questions as you browse with Google Search in alula.
+         </message>
+         <message name="IDS_CONTEXTUAL_TASKS_PINNED_ICON_CHANGED_IPH_SCREENREADER_PANEL"
+           desc="The screen reader text of the one-time toast IPH informing users who previously pinned the Google Search panel shortcut that its toolbar icon has been updated."
+@@ -2218,7 +2218,7 @@ alula is unable to recover your settings.
+           Success! You can now easily ask questions as you browse with Google Search in side panel
+         </message>
+         <message name="IDS_TUTORIAL_CONTEXTUAL_TASKS_STEP3_IN_CHROME" desc="The body text of the third step of the Contextual Tasks tutorial.">
+-          Success! You can now easily ask questions as you browse with Google Search in Chrome
++          Success! You can now easily ask questions as you browse with Google Search in alula
+         </message>
+         <message name="IDS_TUTORIAL_CONTEXTUAL_TASKS_STEP3_PANEL" desc="The body text of the third step of the Contextual Tasks tutorial.">
+           Success! You can now easily ask questions as you browse with Google Search panel
+@@ -3788,7 +3788,7 @@ If this page isn’t working as expected, try allowing optimization.
+         Google Search in side panel
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_PINNING_LABEL_IN_CHROME" desc="The label shown in the Customize Chrome settings menu and toolbar to pin Contextual Tasks to the toolbar.">
+-        Google Search in Chrome
++        Google Search in alula
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_PINNING_LABEL_PANEL" desc="The label shown in the Customize Chrome settings menu and toolbar to pin Contextual Tasks to the toolbar.">
+         Google Search panel
+@@ -3803,7 +3803,7 @@ If this page isn’t working as expected, try allowing optimization.
+         Close Google Search in side panel
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_BUTTON_CLOSE_TOOL_TIP_IN_CHROME" desc="The tooltip text used for the contextual task ephemeral toolbar button when the side panel is open.">
+-        Close Google Search in Chrome
++        Close Google Search in alula
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_BUTTON_CLOSE_TOOL_TIP_PANEL" desc="The tooltip text used for the contextual task ephemeral toolbar button when the side panel is open.">
+         Close Google Search panel
+@@ -3818,7 +3818,7 @@ If this page isn’t working as expected, try allowing optimization.
+         Reopen Google Search in side panel
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_SIDE_PANEL_REOPEN_TOOL_TIP_IN_CHROME" desc="The tooltip text used for contextual task toolbar button">
+-        Reopen Google Search in Chrome
++        Reopen Google Search in alula
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_SIDE_PANEL_REOPEN_TOOL_TIP_PANEL" desc="The tooltip text used for contextual task toolbar button">
+         Reopen Google Search panel
+@@ -3839,7 +3839,7 @@ If this page isn’t working as expected, try allowing optimization.
+         Close Google Search in side panel
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_BUTTON_CONTEXT_MENU_CLOSE_IN_CHROME" desc="The label of the context menu item for removing the contextual tasks ephemeral toolbar button and closing the side panel.">
+-        Close Google Search in Chrome
++        Close Google Search in alula
+       </message>
+       <message name="IDS_CONTEXTUAL_TASKS_EPHEMERAL_BUTTON_CONTEXT_MENU_CLOSE_PANEL" desc="The label of the context menu item for removing the contextual tasks ephemeral toolbar button and closing the side panel.">
+         Close Google Search panel
+diff --git a/chrome/app/extensions_strings.grdp b/chrome/app/extensions_strings.grdp
+index 91b7974352..dce99b79c2 100644
+--- a/chrome/app/extensions_strings.grdp
++++ b/chrome/app/extensions_strings.grdp
+@@ -746,16 +746,16 @@
+     Supercharge your browser with extensions and themes
+   </message>
+   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo.">
+-    Extensions are add-ons for Chrome that can help you do more
++    Extensions are add-ons for alula that can help you do more
+   </message>
+   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_WITH_LINK_IPH_LINK_LABEL" desc="A label of extensions links to chrome web store home page.">
+     Extensions
+   </message>
+   <message name="IDS_EXTENSIONS_ZERO_STATE_CHIPS_WITH_LINK_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo with links to chrome web store home page.">
+-    are add-ons for Chrome that can help you do more
++    are add-ons for alula that can help you do more
+   </message>
+   <message name="IDS_EXTENSIONS_ZERO_STATE_PLAIN_LINK_IPH_DESCRIPTION" desc="An one line description for the extensions zero state in-product-help promo.">
+-    Extensions are add-ons to Chrome that can help you
++    Extensions are add-ons to alula that can help you
+   </message>
+   <message name="IDS_EXTENSIONS_ZERO_STATE_IPH_SHOPPING_CATEGORY_LABEL" desc="Label for the button that opens the Chrome Web Store shopping category page.">
+     Find coupons
+diff --git a/chrome/app/generated_resources.grd b/chrome/app/generated_resources.grd
+index b9d0f60014..648799ed8f 100644
+--- a/chrome/app/generated_resources.grd
++++ b/chrome/app/generated_resources.grd
+@@ -1775,7 +1775,7 @@ are declared in tools/grit/grit_args.gni.
+           T&amp;ake screenshot
+         </message>
+         <message name="IDS_CHROMELABS" desc="The text label of the Chrome Labs menu item">
+-          Chrome &amp;Labs...
++          alula &amp;Labs...
+         </message>
+       </if>
+       <!-- macOS Capitalization Policy (go/chrome-capitalization):
+@@ -1831,7 +1831,7 @@ are declared in tools/grit/grit_args.gni.
+           Reopen Closed Split View
+         </message>
+         <message name="IDS_CHROMELABS" desc="In Title Case: The text label of the Chrome Labs menu item">
+-          Chrome &amp;Labs...
++          alula &amp;Labs...
+         </message>
+       </if>
+ 
+@@ -3055,7 +3055,7 @@ are declared in tools/grit/grit_args.gni.
+       </message>
+       <message name="IDS_DOWNLOAD_BUBBLE_ESB_PROMO"
+                desc="Text for the in-product-help bubble shown for the esb promo download bubble.">
+-        Chrome just blocked a dangerous file from downloading. Get even stronger security with enhanced protection.
++        alula just blocked a dangerous file from downloading. Get even stronger security with enhanced protection.
+       </message>
+       <message name="IDS_DOWNLOAD_BUBBLE_ESB_PROMO_CUSTOM_ACTION"
+                desc="Text for the custom action within the in-product-help bubble shown for the esb promo download bubble.">
+@@ -3573,7 +3573,7 @@ are declared in tools/grit/grit_args.gni.
+       </message>
+       <message name="IDS_DOWNLOAD_LOCAL_DECRYPTION_PROMPT_ALERT"
+                desc="Accessible alert announced when a local decryption prompt appears on a suspicious archive">
+-        <ph name="FILENAME">$1<ex>bla.exe</ex></ph> may be dangerous. Add a password if you want Chrome to verify it or you can download it directly.
++        <ph name="FILENAME">$1<ex>bla.exe</ex></ph> may be dangerous. Add a password if you want alula to verify it or you can download it directly.
+       </message>
+ 
+       <!-- Web App Window Title string -->
+@@ -3801,7 +3801,7 @@ are declared in tools/grit/grit_args.gni.
+           Quit
+         </message>
+         <message name="IDS_QUIT_WITH_APPS_EXPLANATION" desc="Text displayed in a notification explaining that Chrome will continue running in the background as long as there are Chrome Apps open.">
+-          Chrome will keep running while Chrome Apps are open.
++          alula will keep running while Chrome Apps are open.
+         </message>
+         <message name="IDS_QUIT_WITH_APPS_QUIT_LABEL" desc="Button text to quit all running Chrome apps.">
+           Quit all Chrome Apps
+@@ -4259,7 +4259,7 @@ are declared in tools/grit/grit_args.gni.
+         Notifications from this site may be disruptive
+       </message>
+       <message name="IDS_NOTIFICATIONS_QUIET_PERMISSION_BUBBLE_PREDICTION_SERVICE_DESCRIPTION" desc="Text used as notification message when requesting permission for Web Notifications via a notification. Used when the prediction service has decided that the user will be very unlikely to grant this permission.">
+-        Chrome thinks you don't want notifications from this site. So, requests are hidden to reduce interruptions.
++        alula thinks you don't want notifications from this site. So, requests are hidden to reduce interruptions.
+       </message>
+       <message name="IDS_GEOLOCATION_OFF_EXPLANATORY_TEXT" desc="Explanatory animated text that appears (and then disappears) in the address bar as part of the less-prominent UX, when a website requests the geolocation permission.">
+         Location blocked
+@@ -4268,7 +4268,7 @@ are declared in tools/grit/grit_args.gni.
+         Location blocked
+       </message>
+       <message name="IDS_GEOLOCATION_QUIET_PERMISSION_BUBBLE_PREDICTION_SERVICE_DESCRIPTION" desc="Text used as notification message when requesting permission for Geolocation. Used when the prediction service has decided that the user will be very unlikely to grant this permission.">
+-        Chrome thinks you don't want to use your location on this site. So, requests are hidden to reduce interruptions.
++        alula thinks you don't want to use your location on this site. So, requests are hidden to reduce interruptions.
+       </message>
+       <message name="IDS_GEOLOCATION_QUIET_PERMISSION_BUBBLE_ALLOW_BUTTON" desc="Text displayed on the button that enables geolocation for a site. This button is part of the geolocation status bubble, which is triggered when a user clicks on the blocked geolocation icon in the omnibox.">
+         Allow for this site
+@@ -4785,7 +4785,7 @@ are declared in tools/grit/grit_args.gni.
+         Allow remote debugging?
+       </message>
+       <message name="IDS_DEV_TOOLS_CONNECTION_DIALOG_MESSAGE_PART_1" desc="Message displayed in the dialog asking user to confirm allowing a debugging connection to this browser instance.">
+-        An external app wants full control over this Chrome session to debug it. This includes access to your saved data, cookies and site data, and the ability to navigate to any URL.
++        An external app wants full control over this alula session to debug it. This includes access to your saved data, cookies and site data, and the ability to navigate to any URL.
+       </message>
+       <message name="IDS_DEV_TOOLS_CONNECTION_DIALOG_MESSAGE_PART_2" desc="Message displayed in the dialog asking user to confirm allowing a debugging connection to this browser instance.">
+         Only web developers should turn on this feature, and only use it with trusted apps.
+@@ -5190,7 +5190,7 @@ are declared in tools/grit/grit_args.gni.
+         Toolbar
+       </message>
+       <message name="IDS_UTILITY_PROCESS_FILE_UTILITY_NAME" desc="The name of the utility process used for various Chrome specific file operations.">
+-          Chrome File Utilities
++          alula File Utilities
+       </message>
+       <if expr="not is_android">
+         <message name="IDS_UTILITY_PROCESS_PROFILE_IMPORTER_NAME" desc="The name of the utility process used for importing profiles.">
+@@ -5221,7 +5221,7 @@ are declared in tools/grit/grit_args.gni.
+         No-op Service
+       </message>
+       <message name="IDS_SERVICE_PROCESS_DOCUMENT_ANALYSIS_NAME" desc="The name of the service process used for document analysis operations as part of Safe Browsing.">
+-        Chrome Document Analysis
++        alula Document Analysis
+       </message>
+       <!-- Theme preview infobar -->
+       <message name="IDS_THEME_INSTALL_INFOBAR_LABEL" desc="Text displayed on an infobar when a theme has been installed.">
+@@ -6265,13 +6265,13 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         "<ph name="EXTENSION_NAME">$1<ex>Babylon Toolbar</ex></ph>" added
+       </message>
+       <message name="IDS_EXTENSION_EXTERNAL_INSTALL_ALERT_BUBBLE_HEADING_APP" desc="The heading text (below the title) for the bubble that alerts the user that a new external app was installed.">
+-        Another program on your computer added an app that may change the way Chrome works.
++        Another program on your computer added an app that may change the way alula works.
+       </message>
+       <message name="IDS_EXTENSION_EXTERNAL_INSTALL_ALERT_BUBBLE_HEADING_EXTENSION" desc="The heading text (below the title) for the bubble that alerts the user that a new external extension was installed.">
+-        Another program on your computer added an extension that may change the way Chrome works.
++        Another program on your computer added an extension that may change the way alula works.
+       </message>
+       <message name="IDS_EXTENSION_EXTERNAL_INSTALL_ALERT_BUBBLE_HEADING_THEME" desc="The heading text (below the title) for the bubble that alerts the user that a new external theme was installed.">
+-        Another program on your computer added a theme that may change the way Chrome works.
++        Another program on your computer added a theme that may change the way alula works.
+       </message>
+ 
+       <message name="IDS_EXTENSIONS_ADDED_WITHOUT_KNOWLEDGE" desc="Text shown in the extensions settings for items that might have been forcefully added to Chrome without the user's knowledge">
+@@ -6794,7 +6794,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+       </message>
+ 
+       <message name="IDS_APP_HOME_REMOVE_APP" desc="Menu entry label for removing an app from context menu on App Home that isn't locally installed">
+-        Remove from Chrome
++        Remove from alula
+       </message>
+ 
+       <message name="IDS_APP_HOME_APP_SETTINGS" desc="Menu entry label for navigation to App Settings page for an app from context menu on App Home">
+@@ -7205,7 +7205,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+       </message>
+ 
+       <message name="IDS_BAD_FLAGS_FROM_FILE_WARNING_MESSAGE" desc="Message shown when command-line flags are loaded from a file. [Keep it short so it fits in the infobar.]">
+-        Chrome is loading flags from a command-line file. Stability and security may be affected.
++        alula is loading flags from a command-line file. Stability and security may be affected.
+       </message>
+ 
+       <!-- Bad Environment Variables Infobar-->
+@@ -7948,7 +7948,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         Cards
+       </message>
+       <message name="IDS_NTP_CUSTOMIZE_NO_BACKGROUND_LABEL" desc="The label for the 'Default Chrome' tile in the customization menu on the New Tab Page">
+-        Default Chrome
++        Default alula
+       </message>
+       <message name="IDS_NTP_CUSTOMIZE_CHROME_CHANGE_THEME_LABEL" desc="The label for the action button for changing Chrome theme in the New Tab Page customize chrome side panel.">
+         Change theme
+@@ -7969,7 +7969,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         <ph name="THIRD_PARTY_NTP_MANAGER">$1<ex>ZomboCom</ex></ph> is managing your new tab page, opens in a new tab
+       </message>
+       <message name="IDS_NTP_CUSTOMIZE_CHROME_RESET_TO_CLASSIC_CHROME_COMPLETE" desc="Text for a screenreader to read aloud when the user's theme has finished changing to classic chrome in the Customize Chrome side panel.">
+-        Theme updated to Default Chrome
++        Theme updated to Default alula
+       </message>
+       <message name="IDS_NTP_CUSTOMIZE_CHROME_RESET_TO_UPLOADED_IMAGE_COMPLETE" desc="Text for a screenreader to read aloud when the user's theme has finished changing to an uploaded image in the Customize Chrome side panel.">
+         Theme updated to uploaded image
+@@ -8966,10 +8966,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         <ph name="MODULE_NAME">$1<ex>Make Chrome Yours</ex></ph> hidden
+       </message>
+       <message name="IDS_NTP_MODULES_SETUP_LIST_INFO" desc="Text shown in the body of the info dialog of the Make Chrome Yours card.">
+-        You're seeing suggestions on how to personalize Chrome and make it more powerful for your daily needs.
++        You're seeing suggestions on how to personalize alula and make it more powerful for your daily needs.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_INFO_BUTTON_TITLE" desc="Text shown in tooltip of info button of an NTP module.">
+         About this card
+@@ -9053,7 +9053,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing suggested files to help you easily get back to your most recent activity in Google Drive.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_DRIVE_SEE_MORE" desc="A label for the see more button in the Drive module.">
+         See more
+@@ -9068,7 +9068,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing suggested files to help you easily get back to your most recent activity in Microsoft SharePoint and OneDrive.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_MICROSOFT_FILES_DISABLE_BUTTON_TEXT" desc="Text shown on the disable button of a NTP Microsoft files card.">
+         Don't show SharePoint and OneDrive files
+@@ -9104,7 +9104,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing your calendar to help you easily navigate to your next event in Google Calendar.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_GOOGLE_CALENDAR_MORE_ACTIONS" desc="Text shown on the tooltip for the 3 dot menu on the Google Calendar card on the NTP.">
+         More actions for Google Calendar
+@@ -9131,7 +9131,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+        You’re seeing your calendar to help you easily navigate to your next event in Outlook Calendar.
+        <ph name="BREAK">&lt;br&gt;</ph>
+        <ph name="BREAK">&lt;br&gt;</ph>
+-       You can manage settings from the card menu or see more options in Customize Chrome.
++       You can manage settings from the card menu or see more options in Customize alula.
+      </message>
+       <message name="IDS_NTP_MODULES_CALENDAR_DOUBLE_BOOKED" desc="Text displaying that the calendar event is booked at the same time as another." meaning="The meeting takes place at the same time as another.">
+         Double-Booked
+@@ -9200,13 +9200,13 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing pages you've visited and suggested searches to help you easily get back to your most recent activity.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_HISTORY_CLUSTERS_WITH_DISCOUNT_INFO" desc="Text shown in the body of the info dialog of the history clusters module when the cluster has available discount.">
+         You’re seeing suggested searches and shopping discounts that might interest you based on your recent activity.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from this card anytime or see more options in Customize Chrome.
++        You can manage settings from this card anytime or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_HISTORY_CLUSTERS_SENTENCE2" desc="Variant of the name of the History Clusters module in sentence case shown in various UIs.">
+         Journeys
+@@ -9242,7 +9242,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing tabs from other devices to help you easily get back to your most recent activity.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_TAB_RESUMPTION_MULTI_DISMISS" desc="String text for module dismissal in the Tab Resumption module.">
+         Tabs hidden
+@@ -9281,7 +9281,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         You’re seeing your recently used tab groups to help you easily pick up where you left off.
+         <ph name="BREAK">&lt;br&gt;</ph>
+         <ph name="BREAK">&lt;br&gt;</ph>
+-        You can manage settings from the card menu or see more options in Customize Chrome.
++        You can manage settings from the card menu or see more options in Customize alula.
+       </message>
+       <message name="IDS_NTP_MODULES_TAB_GROUPS_TITLE" desc="Title for Tab Groups NTP module on the new tab page.">
+         Your tab groups
+@@ -9528,7 +9528,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         Please try again later
+       </message>
+       <message name="IDS_SHOW_CUSTOMIZE_CHROME_SIDE_PANEL" desc="The title of the menu item for showing the Customize Chrome side panel.">
+-        Customize Chrome
++        Customize alula
+       </message>
+       <if expr="use_titlecase">
+         <message name="IDS_SHOW_CUSTOMIZE_CHROME_TOOLBAR" desc="The title of the menu item for showing the toolbar section of the Customize Chrome side panel.">
+@@ -10851,7 +10851,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+           Open
+         </message>
+         <message name="IDS_INTENT_PICKER_BUBBLE_VIEW_STAY_IN_CHROME" desc="Message contained in a button to continue the navigation within Chrome.">
+-          Stay in Chrome
++          Stay in alula
+         </message>
+         <message name="IDS_INTENT_PICKER_BUBBLE_VIEW_INITIATING_ORIGIN" desc="The label for the initiating origin of the intent picker.">
+           From <ph name="ORIGIN">$1<ex>https://google.com</ex></ph>
+@@ -11290,7 +11290,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         Get back here fast by bookmarking this tab
+       </message>
+       <message name="IDS_CHROME_TIP" desc="Accessible name used by a screen reader for the in-product-help or tutorial bubble icon." is_accessibility_with_no_ui="true">
+-        Chrome tip
++        alula tip
+       </message>
+       <message name="IDS_EXTENSIONS_MENU_IPH_ENTRY_POINT_TITLE" desc="">
+         See what extensions can read or change a site
+@@ -11320,7 +11320,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+          Enhance your browser with extensions
+       </message>
+       <message name="IDS_EXTENSIONS_ZERO_STATE_PROMO_CUSTOM_ACTION_IPH_DESCRIPTION" desc="Body text shown on the promotional UI appearing when the user has no extensions installed.">
+-         Extensions are add-ons to Chrome that can help you stay organized, simplify tasks, and customize your browsing
++         Extensions are add-ons to alula that can help you stay organized, simplify tasks, and customize your browsing
+       </message>
+       <message name="IDS_EXTENSIONS_ZERO_STATE_PROMO_CUSTOM_ACTION_IPH_ACCEPT" desc="Text on the custom action button that opens a new tab to the Chrome Web Store.">
+          Discover extensions
+@@ -11374,7 +11374,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         Open App settings
+       </message>
+       <message name="IDS_UPDATED_CONNECTION_SECURITY_INDICATORS_PROMO" desc="Text shown on promotional UI appearing next to the new omnibox connection security icon">
+-        Your connection is always secure unless Chrome tells you otherwise
++        Your connection is always secure unless alula tells you otherwise
+       </message>
+       <message name="IDS_READING_LIST_IN_SIDE_PANEL_PROMO" desc="Text shown on promotional UI appearing next to the side panel button">
+         Your reading list has moved to the new side panel. Try it here.
+@@ -11532,10 +11532,10 @@ Keep your key file in a safe place. You will need it to create new versions of y
+ 
+       <!-- Customize Chrome Tutorial Strings -->
+       <message name="IDS_TUTORIAL_CUSTOMIZE_CHROME_START_TUTORIAL_IPH" desc="The description of the IPH to start the customize chrome tutorial">
+-        Customize Chrome to give your browser a new look
++        Customize alula to give your browser a new look
+       </message>
+       <message name="IDS_TUTORIAL_CUSTOMIZE_CHROME_OPEN_SIDE_PANEL" desc="The description of the 'open side panel' step in customize chrome tutorial">
+-        Click "Customize Chrome"
++        Click "Customize alula"
+       </message>
+       <message name="IDS_TUTORIAL_CUSTOMIZE_CHROME_CHANGE_THEME" desc="The description of the 'change theme' step in customize chrome tutorial">
+         Click “Change theme” to explore themes inspired by artists, nature and more
+@@ -11550,7 +11550,7 @@ Keep your key file in a safe place. You will need it to create new versions of y
+         Click the back arrow to explore other options
+       </message>
+       <message name="IDS_TUTORIAL_CUSTOMIZE_CHROME_SUCCESS_BODY" desc="The description of the body text in the 'success' step in customize chrome tutorial">
+-        You can now give your browser a new look at any time from the Customize Chrome menu
++        You can now give your browser a new look at any time from the Customize alula menu
+       </message>
+ 
+       <!-- Password Manager Tutorial Strings -->
+@@ -11657,12 +11657,12 @@ Keep your key file in a safe place. You will need it to create new versions of y
+          Show original content?
+       </message>
+       <message name="IDS_NEAR_OOM_REDUCTION_MESSAGE_DESCRIPTION" desc="The description of the message stating that the browser removed some content on the page using too much memory.">
+-         To save memory, Chrome removed some content
++         To save memory, alula removed some content
+       </message>
+ 
+       <!-- Tailored Security Prompt for Unconsented users -->
+       <message name="IDS_TAILORED_SECURITY_UNCONSENTED_MESSAGE_TITLE" desc="The title of the message asking if the user wants to enable Enhanced Safe Browsing">
+-         Also turn on Enhanced Safe Browsing for this Chrome profile?
++         Also turn on Enhanced Safe Browsing for this alula profile?
+       </message>
+       <message name="IDS_TAILORED_SECURITY_UNCONSENTED_MESSAGE_ACCEPT" desc="The text on the 'accept' button when asking if the user wants to enable Enhanced Safe Browsing">
+         Turn on
+@@ -11764,10 +11764,10 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           Use Google Password Manager to sign in faster to sites from any of your devices
+         </message>
+         <message name="IDS_PASSWORDS_SAVE_PRIMING_PROMO_BODY_NOT_SIGNED_IN" desc="Body of IPH prompting users to consider saving passwords">
+-          To save strong passwords with Google Password Manager, sign in to Chrome
++          To save strong passwords with Google Password Manager, sign in to alula
+         </message>
+         <message name="IDS_PASSWORDS_SAVE_PRIMING_PROMO_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text for IPH prompting users to consider saving passwords">
+-          You can save passwords with Google Password Manager when you are signed in to Chrome
++          You can save passwords with Google Password Manager when you are signed in to alula
+         </message>
+         <message name="IDS_PASSWORDS_SAVE_RECOVERY_PROMO_BODY" desc="Body of IPH prompting users to reconsider saving passwords">
+           To save your password to Google Password Manager, click the key
+@@ -12083,10 +12083,10 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+         Delete browsing data
+       </message>
+       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE" desc="A dialog informing the user that their Chrome browsing history was deleted, but other forms of history can still be found on Google My Activity.">
+-        The selected data has been removed from Chrome and synced devices. Your Google Account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/a&gt;</ph>.
++        The selected data has been removed from alula and synced devices. Your Google Account may have other forms of browsing history like searches and activity from other Google services at <ph name="BEGIN_LINK">&lt;a target="_blank" href="$1"&gt;</ph>myactivity.google.com<ph name="END_LINK">&lt;/a&gt;</ph>.
+       </message>
+       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE_TITLE" desc="Title of a dialog that informs the user that the deletion of Chrome's browsing data has been completed.">
+-        Deleted Chrome data
++        Deleted alula data
+       </message>
+       <message name="IDS_CLEAR_BROWSING_DATA_HISTORY_NOTICE_OK" desc="Button in a dialog that informs the user that the deletion of Chrome's browsing data has been completed.">
+         Ok, got it
+@@ -12119,7 +12119,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+       </message>
+ 
+       <message name="IDS_ZOOMLEVELS_CHROME_ERROR_PAGES_LABEL" desc="Label for zoom level list entry for Chrome error pages.">
+-        (Chrome error pages)
++        (alula error pages)
+       </message>
+ 
+       <message name="IDS_STORAGE_ACCESS_MANAGE_TEXT" desc="The text on the button to manage the StorageAcccess settings.">
+@@ -12982,7 +12982,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+ 
+       <!-- Tab Group Deletion Dialog -->
+       <message name="IDS_TAB_GROUP_DELETION_DIALOG_MISSING_EMAIL" desc="The email address used in the deletion dialog body when an email is missing.">
+-        Chrome with this Google Account
++        alula with this Google Account
+       </message>
+       <message name="IDS_TAB_GROUP_DELETION_DIALOG_BODY_SYNCED_DELETE" desc="The body text for deleting a synced group or groups. Displayed in the Tab Group Deletion Dialog.">
+         {GROUP_COUNT, plural,
+@@ -13601,7 +13601,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           Collaborate with others
+         </message>
+         <message name="IDS_DATA_SHARING_NEED_SIGN_IN_AND_SYNC_HISTORY_BODY" desc="The body of dialog that prompts users to sign in and opt in to history sync.">
+-          To share tabs and collaborate with others, sign in to Chrome and sync your history and tabs. You’ll also get your passwords and more on all your devices.
++          To share tabs and collaborate with others, sign in to alula and sync your history and tabs. You’ll also get your passwords and more on all your devices.
+         </message>
+         <message name="IDS_DATA_SHARING_NEED_SYNC_HISTORY_BODY" desc="The body of dialog that prompts users to sign in and opt in to history sync.">
+           To share tabs and collaborate with others, sync your history and tabs to <ph name="EMAIL">$1<ex>foo@gmail.com</ex></ph>
+@@ -13628,13 +13628,13 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           Make sure you trust the person that sent this invitation
+         </message>
+         <message name="IDS_DATA_SHARING_ORGANIZATION_DISALLOW_SIGN_IN_BODY" desc="The body text of the organization disallowing signin dialog.">
+-          To share or join tab groups, you must be able to sign in to Chrome
++          To share or join tab groups, you must be able to sign in to alula
+         </message>
+         <message name="IDS_DATA_SHARING_ORGANIZATION_LIMIT_SAVE_BODY" desc="The body text of the organization limiting saving to account dialog.">
+           When your organization limits saving to your Google Account, you can’t share or join tab groups
+         </message>
+         <message name="IDS_DATA_SHARING_SIGNED_OUT_BODY" desc="The body text of the dialog that prompts users to allow Chrome sign in.">
+-          To share, join, and collaborate in tab groups, open settings and turn on Allow Chrome sign-in
++          To share, join, and collaborate in tab groups, open settings and turn on Allow alula sign-in
+         </message>
+         <message name="IDS_DATA_SHARING_SETTINGS" desc="The generic text on buttons that take users to Chrome settings page.">
+           Settings
+@@ -13810,7 +13810,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           Relaunch to update
+         </message>
+         <message name="IDS_APP_MENU_BUTTON_UPDATE_ALT3" desc="Alternate short label next to app-menu button when an update is available.">
+-          New Chrome available
++          New alula available
+         </message>
+       </if>
+       <message name="IDS_APP_MENU_BUTTON_ERROR" desc="Short label next to app-menu button when the user needs to resolve something.">
+@@ -13852,10 +13852,10 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+         <ph name="APP_NAME">$1<ex>html5rocks.com</ex></ph> is sharing a window and audio.
+       </message>
+       <message name="IDS_MEDIA_TAB_CAPTURE_NOTIFICATION_TEXT" desc="label used in screen capture notification UI to show the screen sharing status when the stream is consumed by the same app initiating the window picker">
+-        <ph name="APP_NAME">$1<ex>html5rocks.com</ex></ph> is sharing a Chrome tab.
++        <ph name="APP_NAME">$1<ex>html5rocks.com</ex></ph> is sharing a alula tab.
+       </message>
+       <message name="IDS_MEDIA_TAB_CAPTURE_WITH_AUDIO_NOTIFICATION_TEXT" desc="label used in screen capture notification UI to show the screen sharing status when the stream is consumed by the same app initiating the window picker">
+-        <ph name="APP_NAME">$1<ex>html5rocks.com</ex></ph> is sharing a Chrome tab and audio.
++        <ph name="APP_NAME">$1<ex>html5rocks.com</ex></ph> is sharing a alula tab and audio.
+       </message>
+       <message name="IDS_MEDIA_SCREEN_CAPTURE_NOTIFICATION_HIDE" desc="Text shown on a link that hides the notification that the screen is being captured.">
+         Hide
+@@ -14095,7 +14095,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           This extension violates the Chrome Web Store policy.
+         </message>
+         <message name="IDS_EXTENSIONS_BLOCKLISTED_POTENTIALLY_UNWANTED" desc="The text explaining the reason for disabling extension or app. The extension in question might have been installed without user consent.">
+-          Disabled by Chrome. This extension may be unsafe.
++          Disabled by alula. This extension may be unsafe.
+         </message>
+ 
+         <!-- Enhanced Safe Browsing CRX allowlist warning -->
+@@ -14131,7 +14131,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+           <ph name="THIRD_PARTY_TOOL_NAME">$1<ex>SuperDuper PC Cleaner Pro</ex></ph> wants to reset your settings.
+         </message>
+         <message name="IDS_TRIGGERED_RESET_PROFILE_SETTINGS_EXPLANATION" desc="Dialog title for reset dialog triggered by a third party tool">
+-          <ph name="THIRD_PARTY_TOOL_NAME">$1<ex>SuperDuper PC Cleaner Pro</ex></ph> wants to restore your Chrome settings to their original defaults. This will reset your homepage, new tab page and search engine, disable your extensions, and unpin all tabs. It will also clear other temporary and cached data, such as cookies, content and site data.
++          <ph name="THIRD_PARTY_TOOL_NAME">$1<ex>SuperDuper PC Cleaner Pro</ex></ph> wants to restore your alula settings to their original defaults. This will reset your homepage, new tab page and search engine, disable your extensions, and unpin all tabs. It will also clear other temporary and cached data, such as cookies, content and site data.
+         </message>
+         <message name="IDS_TRIGGERED_RESET_PROFILE_SETTINGS_DEFAULT_TOOL_NAME" desc="Default tool name when a reset was triggered but a name could not be found.">
+           A cleanup tool
+@@ -14263,7 +14263,7 @@ Check your passwords anytime in <ph name="GOOGLE_PASSWORD_MANAGER">$1<ex>Google
+         Sent!
+       </message>
+       <message name="IDS_TUTORIAL_SEND_TAB_TO_SELF_SUCCESS_BODY" desc="Success description educating about sign-in and cross-device sharing.">
+-        When you’re signed in to Chrome with the same account, you can quickly send links between any devices
++        When you’re signed in to alula with the same account, you can quickly send links between any devices
+       </message>
+       <message name="IDS_SEND_TAB_TO_SELF_VERIFY_ITS_YOU_PROMO_TITLE" desc="Title of the send-tab-to-self sign-in promo bubble when the user needs to verify their identity (reauthenticate).">
+         Send a link to another device
+@@ -18034,7 +18034,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+ 
+     <!-- Automation infobar -->
+     <message name="IDS_CONTROLLED_BY_AUTOMATION" desc="Message shown when the browser session is being controlled by an automated test.">
+-      Chrome is being controlled by automated test software
++      alula is being controlled by automated test software
+     </message>
+ 
+     <!-- Chrome for Testing infobar main text -->
+@@ -18342,7 +18342,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       </message>
+       <if expr="is_macosx">
+         <message name="IDS_WEBAUTHN_YOUR_CHROME_PROFILE" desc="Menu item text. The user selects this to use a hardware-based authentication mechanism that is built in to the computer, such as a fingerprint reader. The credential itself is stored in the Chrome profile, however, and this text emphasizes that.">
+-          Your Chrome profile
++          Your alula profile
+         </message>
+       </if>
+       <message name="IDS_WEBAUTHN_TRANSPORT_INTERNAL" desc="Menu item text. The user selects this to use a hardware-based authentication mechanism that is built in to the computer, such as a fingerprint reader.">
+@@ -18432,7 +18432,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+ 
+       <if expr="is_macosx">
+         <message name="IDS_WEBAUTHN_BLUETOOTH_PERMISSION" desc="Body text in a dialog that appears when the user has requested some function that depends on Bluetooth, but Chrome doesn't have permission to use Bluetooth. The action on this dialog is a button that will open the macOS System Settings so that the user can grant permission.">
+-          Chrome needs permission to use Bluetooth to connect to your device
++          alula needs permission to use Bluetooth to connect to your device
+         </message>
+       </if>
+ 
+@@ -18608,7 +18608,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+         On other devices
+       </message>
+       <message name="IDS_WEBAUTHN_SOURCE_CHROME_PROFILE" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in the user's Chrome Profile.">
+-        Your Chrome profile
++        Your alula profile
+       </message>
+       <message name="IDS_WEBAUTHN_SOURCE_ICLOUD_KEYCHAIN" desc="The subtitle shown in a button that lets the user select a passkey to sign in, indicating that the passkey resides in Apple Passwords. Apple Passwords is an Apple brand and should be translated the same as it is in Apple devices. If you edit the language code in https://support.apple.com/es-es/104955 you can see how Apple translates it in several languages. ('Passwords' is usually localized.)">
+         Apple Passwords
+@@ -19093,24 +19093,24 @@ Please help our engineers fix this problem. Tell us what happened right before y
+     </message>
+ 
+     <message name="IDS_TAILORED_SECURITY_ENABLED_DIALOG_MAIN_TEXT" desc="Title shown in the tab dialog when the account tailored security setting changes for a consented primary account">
+-      You have Chrome's strongest security against dangerous websites, downloads and extensions
++      You have alula's strongest security against dangerous websites, downloads and extensions
+     </message>
+     <message name="IDS_TAILORED_SECURITY_DISABLED_DIALOG_MAIN_TEXT" desc="Title shown in the tab dialog when the account tailored security setting changes for a consented primary account">
+-      You're getting standard security protection. To get more protection against dangerous websites, downloads, and extensions, turn on Enhanced Safe Browsing in Chrome settings.
++      You're getting standard security protection. To get more protection against dangerous websites, downloads, and extensions, turn on Enhanced Safe Browsing in alula settings.
+     </message>
+     <message name="IDS_TAILORED_SECURITY_DISABLED_DIALOG_ACCEPT_BUTTON" desc="The text on the accept button in the tab modal dialog when the account tailored security setting is disabled for a consented primary account">
+       Got it
+     </message>
+     <message name="IDS_TAILORED_SECURITY_DIALOG_SETTINGS_BUTTON" desc="The text on the cancel button in the tab dialog when the account tailored security setting changes for a consented primary account">
+-      Chrome settings
++      alula settings
+     </message>
+ 
+     <!-- Tailored security dialog for unconsented primary accounts -->
+     <message name="IDS_TAILORED_SECURITY_UNCONSENTED_MODAL_TITLE" desc="Title shown in the tab modal dialog when the account tailored security setting changes for an unconsented primary account">
+-      Also turn on Enhanced Safe Browsing for this Chrome profile?
++      Also turn on Enhanced Safe Browsing for this alula profile?
+     </message>
+     <message name="IDS_TAILORED_SECURITY_UNCONSENTED_MODAL_BODY" desc="Body shown in the tab modal dialog when the account tailored security setting changes for an unconsented primary account">
+-      Chrome&#x2019;s strongest security does more to protect you against dangerous websites, downloads, and extensions
++      alula&#x2019;s strongest security does more to protect you against dangerous websites, downloads, and extensions
+     </message>
+     <message name="IDS_TAILORED_SECURITY_UNCONSENTED_ACCEPT_BUTTON" desc="The text on the accept button in the tab modal dialog when the account tailored security setting changes for an unconsented primary account">
+       Turn on
+@@ -19124,7 +19124,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       Enhanced Safe Browsing is on
+     </message>
+     <message name="IDS_TAILORED_SECURITY_CONSENTED_ENABLE_MESSAGE_DESCRIPTION" desc="Description shown in the Android message when the account tailored security setting changes for a consented primary account">
+-      You have Chrome&#x2019;s strongest security against harmful websites
++      You have alula&#x2019;s strongest security against harmful websites
+     </message>
+     <message name="IDS_TAILORED_SECURITY_CONSENTED_DISABLE_MESSAGE_TITLE" desc="Title shown in the Android message when the account tailored security setting changes for a consented primary account">
+       Enhanced Safe Browsing is off
+@@ -19753,10 +19753,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
+         From your recent search
+       </message>
+       <message name="IDS_MULTISTEP_FILTER_IPH_BODY" desc="Text shown in the IPH bubble for educating users about Multistep Filter." translateable="false">
+-        Chrome can now suggest your recent filters and search details, helping you pick up where you left off or compare options across sites
++        alula can now suggest your recent filters and search details, helping you pick up where you left off or compare options across sites
+       </message>
+       <message name="IDS_MULTISTEP_FILTER_IPH_BODY_SCREENREADER" is_accessibility_with_no_ui="true" desc="Screenreader text shown in the IPH bubble for educating users about Multistep Filter." translateable="false">
+-        Chrome can now suggest your recent filters and search details, helping you pick up where you left off or compare options across sites
++        alula can now suggest your recent filters and search details, helping you pick up where you left off or compare options across sites
+       </message>
+       <message name="IDS_LINK_COPIED_TOAST_BODY" desc="Text on a toast notification that is shown when a link is successfully copied.">
+         Link copied
+@@ -19816,7 +19816,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+         Close
+       </message>
+       <message name="IDS_NON_MILESTONE_UPDATE_TOAST_BODY" desc="Text on a toast notification that is shown when a non milestone update is complete.">
+-        Chrome was updated
++        alula was updated
+       </message>
+       <message name="IDS_GLIC_SHARE_IMAGE_FAILED_TOAST_BODY" desc="Text on a toast notification that is shown when sharing an image with Gemini fails (when using the 'Create image with Gemini' context menu item)">
+         Could not share image with Gemini. Try again or try another image.
+@@ -20067,7 +20067,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       Launch application
+     </message>
+     <message name="IDS_IWA_INSTALLER_VERIFICATION_TITLE" desc="Title of the verification step of the IWA installation">
+-      Chrome is verifying the installation bundle
++      alula is verifying the installation bundle
+     </message>
+     <message name="IDS_IWA_INSTALLER_VERIFICATION_SUBTITLE" desc="Subtitle of the verification step of the IWA installation">
+       Please wait while verification is in progress
+@@ -20079,7 +20079,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+         other {Checking public key and integrity block... # minutes remaining}}
+     </message>
+     <message name="IDS_IWA_INSTALLER_VERIFICATION_ERROR_TITLE" desc="Title of an error popup during the verification step of the Isolated Web App installer">
+-      Chrome failed to verify this installation bundle
++      alula failed to verify this installation bundle
+     </message>
+     <message name="IDS_IWA_INSTALLER_VERIFICATION_ERROR_SUBTITLE" desc="Subtitle of an error popup during the verification step of the Isolated Web App installer">
+       This bundle might be broken or compromised. Please close this window and download it again
+@@ -20192,7 +20192,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+ 
+     <!-- PDF Searchify elements. -->
+     <message name="IDS_PDF_SEARCHIFY_IPH_TITLE" desc="Title of in product help to introduce PDF Searchify feature.">
+-    Chrome makes PDFs better
++    alula makes PDFs better
+     </message>
+     <message name="IDS_PDF_SEARCHIFY_IPH_BODY" desc="Content of in product help to introduce PDF Searchify feature.">
+     PDFs automatically get converted so you can search and select text
+@@ -20281,7 +20281,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+     Always allow
+   </message>
+   <message name="IDS_CHROME_NO_LONGER_SHOW_WARNINGS_NOTIFICATION_BODY" desc="The body for the notification sent by Chrome informing the user that their decision to never show warnings for the url has been applied.">
+-    Chrome will stop flagging notifications from this site as spam
++    alula will stop flagging notifications from this site as spam
+   </message>
+   <message name="IDS_CHROME_NO_LONGER_SHOW_WARNINGS_NOTIFICATION_TITLE_NEW" desc="The title for the notification sent by Chrome informing the user that their decision to never show warnings for the url has been applied.">
+     Notifications allowed from <ph name="DOMAIN">$1<ex>example.com</ex></ph>
+@@ -20400,10 +20400,10 @@ Please help our engineers fix this problem. Tell us what happened right before y
+ 
+     <!-- Tips Notifications-->
+     <message name="IDS_TIPS_NOTIFICATIONS_HELPFUL_BUTTON_TEXT" desc="Text for the helpful button found on tips notifications.">
+-      Open Chrome
++      Open alula
+     </message>
+     <message name="IDS_TIPS_NOTIFICATIONS_ENHANCED_SAFE_BROWSING_TITLE" desc="Title for the enhanced safe browsing tip notification. [CHAR_LIMIT=32]">
+-      Get Chrome's strongest security
++      Get alula's strongest security
+     </message>
+     <message name="IDS_TIPS_NOTIFICATIONS_ENHANCED_SAFE_BROWSING_SUBTITLE" desc="Subtitle for the enhanced safe browsing tip notification.">
+       Add an extra layer of security against online threats with enhanced protection
+@@ -20433,7 +20433,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       Create, save, and manage your passwords so you can easily sign in
+     </message>
+     <message name="IDS_TIPS_NOTIFICATIONS_SIGNIN_TITLE" desc="Title for the sign-in tip notification. [CHAR_LIMIT=32]">
+-      Make Chrome your own
++      Make alula your own
+     </message>
+     <message name="IDS_TIPS_NOTIFICATIONS_SIGNIN_SUBTITLE" desc="Subtitle for the sign-in tip notification.">
+       Sign in to easily continue on all your devices
+@@ -20454,7 +20454,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+       Pick up where you left off
+     </message>
+     <message name="IDS_TIPS_NOTIFICATIONS_RECENT_TABS_SUBTITLE" desc="Subtitle for the recent tabs tip notification.">
+-      You can reopen tabs that you've recently closed from wherever you use Chrome
++      You can reopen tabs that you've recently closed from wherever you use alula
+     </message>
+ 
+     <!-- chrome://updater -->
+@@ -20819,7 +20819,7 @@ Please help our engineers fix this problem. Tell us what happened right before y
+ 
+     <!-- Chrome finds Notifications -->
+     <message name="IDS_CHROME_FINDS_NOTIFICATIONS_HELPFUL_BUTTON_TEXT" desc="Text for the helpful button found on Chrome finds notifications.">
+-      Open in Chrome
++      Open in alula
+     </message>
+     <message name="IDS_CHROME_FINDS_NOTIFICATIONS_UNHELPFUL_BUTTON_TEXT" desc="Text for the unhelpful button found on Chrome finds notifications.">
+       Not interested
+diff --git a/chrome/app/password_manager_ui_strings.grdp b/chrome/app/password_manager_ui_strings.grdp
+index e49648c05c..b8517cf266 100644
+--- a/chrome/app/password_manager_ui_strings.grdp
++++ b/chrome/app/password_manager_ui_strings.grdp
+@@ -55,7 +55,7 @@
+     Share
+   </message>
+   <message name="IDS_PASSWORD_MANAGER_UI_SHARE_PASSWORD_ERROR_DESCRIPTION" desc="The descrtiption of the unknown error dialog in the password sharing flow.">
+-    Your password wasn’t shared. Check your internet connection and make sure you’re signed in to Chrome. Then, try again.
++    Your password wasn’t shared. Check your internet connection and make sure you’re signed in to alula. Then, try again.
+   </message>
+   <message name="IDS_PASSWORD_MANAGER_UI_SHARE_PASSWORD_ERROR_TITLE" desc="The title of the unknown error dialog in the password sharing flow.">
+     Something went wrong
+@@ -709,7 +709,7 @@
+   </message>
+   <if expr="is_macosx">
+     <message name="IDS_PASSWORD_MANAGER_UI_MANAGE_PASSKEYS_FROM_PROFILE_LABEL" desc="The label on a row that a user can click in order to see and delete passkeys saved on their computer. For consistency, the word 'passkey' is in the glossary with translations already suggested.">
+-      Manage passkeys in your Chrome profile
++      Manage passkeys in your alula profile
+     </message>
+   </if>
+   <if expr="is_win">
+@@ -896,7 +896,7 @@
+         Password Manager needs access to MacOS Keychain
+       </message>
+       <message name="IDS_PASSWORD_MANAGER_UI_RELAUNCH_CHROME_PROMO_CARD_DESCRIPTION" desc="Description for not branded Relaunch ChrChromiumome promo card.">
+-        To use Password Manager with macOS Keychain, relaunch Chromium and allow Keychain access. Your tabs will reopen after relaunching.
++        To use Password Manager with macOS Keychain, relaunch alula and allow Keychain access. Your tabs will reopen after relaunching.
+       </message>
+     </else>
+     </if>
+@@ -930,7 +930,7 @@
+     </then>
+     <else>
+       <message name="IDS_PASSWORD_MANAGER_UI_RELAUNCH_CHROME_PROMO_CARD_ACTION" desc="Action button for not branded Relaunch Chrome promo card.">
+-        Relaunch Chromium
++        Relaunch alula
+       </message>
+     </else>
+     </if>
+@@ -1037,7 +1037,7 @@
+   </then>
+   <else>
+     <message name="IDS_PASSWORD_MANAGER_UI_PASSWORD_CHANGE_TOAST_SIGN_IN_TO_CONTINUE" desc="The description for the automated password change entry in Password Manager settings.">
+-      You need to sign in before Chromium can finish this task
++      You need to sign in before alula can finish this task
+     </message>
+   </else>
+   </if>
+@@ -1108,7 +1108,7 @@
+   </then>
+   <else>
+     <message name="IDS_PASSWORD_MANAGER_UI_PASSWORD_CHANGE_SETTINGS_DESCRIPTION" desc="The description for the automated password change entry in Password Manager settings.">
+-      If Chromium finds one of your passwords in a public data breach, it can offer to change your password for you if you're signed in
++      If alula finds one of your passwords in a public data breach, it can offer to change your password for you if you're signed in
+     </message>
+   </else>
+   </if>
+@@ -1123,7 +1123,7 @@
+   </then>
+   <else>
+     <message name="IDS_PASSWORD_MANAGER_UI_PASSWORD_CHANGE_SETTINGS_WITH_PRIVATE_INFERENCE_DESCRIPTION" desc="The description for the automated password change entry in Password Manager settings.">
+-      If Chromium finds one of your passwords in a public data breach, Google Password Manager can offer to change it for you when you're signed in.
++      If alula finds one of your passwords in a public data breach, Google Password Manager can offer to change it for you when you're signed in.
+     </message>
+   </else>
+   </if>
+@@ -1141,7 +1141,7 @@
+     </message>
+   </if>
+   <message name="IDS_PASSWORD_MANAGER_UI_PASSWORD_CHANGE_CHECKUP_BUTTON_ARIA_DESCRIPTION" desc="An accessibility description for the automated password change button in Password Manager checkup.">
+-    Let Chromium automatically change password for <ph name="WEBSITE">$1<ex>website.com</ex></ph>
++    Let alula automatically change password for <ph name="WEBSITE">$1<ex>website.com</ex></ph>
+   </message>
+   <message name="IDS_PASSWORD_MANAGER_UI_PASSWORD_CHANGE_ATTEMPTING_SIGN_IN" desc="Status text on the button when automated password change is attempting to sign the user in.">
+     Attempting sign-in...
+@@ -1169,7 +1169,7 @@
+   </then>
+   <else>
+     <message name="IDS_SETTINGS_PASSWORD_CHANGE_SUBLABEL_WITH_LEARN_MORE" desc="Sublabel for password change entry in settings. The description of the feature beneath the 'Automated password change' feature title. This and the bullets beneath this paragraph represent the full description of the feature. * 'public' does two things: 1) it provides distance between 'Chrome' and 'data breach', because we don’t want users to associate the breach with Chrome (Chrome didn’t have a data leak, 2) and related, it might reassure the user to know that Chrome is using public information to establish these lists of compromised passwords. * 'Google Password Manager can offer…': The user has to agree to have this feature update their password for them each time. So Google Password Manager is ‘offering’ to do something for the user.">
+-      If Chromium finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in. <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>More about automated password change<ph name="END_LINK">&lt;/a&gt;</ph>
++      If alula finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in. <ph name="BEGIN_LINK">&lt;a href="$1" target="_blank"&gt;</ph>More about automated password change<ph name="END_LINK">&lt;/a&gt;</ph>
+     </message>
+   </else>
+   </if>
+@@ -1190,7 +1190,7 @@
+     </then>
+     <else>
+       <message name="IDS_PASSWORD_MANAGER_UI_USER_INTERVENTION_NEEDED_TITLE" desc="Title of a dialog shown when the automated password change stops because the website requires identity verification.">
+-        Chromium needs help changing your password
++        alula needs help changing your password
+       </message>
+     </else>
+   </if>
+diff --git a/chrome/app/profiles_strings.grdp b/chrome/app/profiles_strings.grdp
+index d1c1fe7bc4..355c129f61 100644
+--- a/chrome/app/profiles_strings.grdp
++++ b/chrome/app/profiles_strings.grdp
+@@ -171,7 +171,7 @@
+     Sync disabled
+   </message>
+   <message name="IDS_PROFILES_DASHER_FEATURE_DISABLED_TITLE" desc="Description of the profile user menu when certain features are disabled for Dasherless profile.">
+-    This isn't a Google Account. Items you save to Chrome won't be available on other devices.
++    This isn't a Google Account. Items you save to alula won't be available on other devices.
+   </message>
+   <message name="IDS_PROFILES_DICE_SYNC_PAUSED_TITLE" desc="Title of the profile user menu when sync is paused.">
+     Sync is paused
+@@ -187,7 +187,7 @@
+ 
+   <!-- Signin Composebox Drive context menu option promo. -->
+   <message name="IDS_COMPOSEBOX_DRIVE_CONTEXT_MENU_OPTION_SIGNIN_PROMO_TITLE" desc="The title in the sign-in promo bubble shown to users when interacting with the Google Drive context menu option in the composebox while not signed in.">
+-    Sign in to Chrome
++    Sign in to alula
+   </message>
+   <message name="IDS_COMPOSEBOX_DRIVE_CONTEXT_MENU_OPTION_VERIFY_PROMO_TITLE" desc="The title in the sign-in promo bubble shown to users when interacting with the Google Drive context menu option in the composebox while sign-in credentials have expired.">
+     Verify it's you
+diff --git a/chrome/app/settings_strings.grdp b/chrome/app/settings_strings.grdp
+index e1bf5d14c9..8f7cd9a7f3 100644
+--- a/chrome/app/settings_strings.grdp
++++ b/chrome/app/settings_strings.grdp
+@@ -78,7 +78,7 @@
+     </if>
+     <if expr="is_macosx">
+       <message name="IDS_ABOUT_CHROME_AUTOUPDATE_ALL" desc="The 'Automatically update Chrome for all users.' button in the About window.  Mac-only.">
+-        Automatically update Chrome for all users
++        Automatically update alula for all users
+       </message>
+       <message name="IDS_ABOUT_CHROME_AUTOUPDATE_ALL_IS_ON" desc="The text in About Page to indicate automatic update is turned on.  Mac-only.">
+         Automatic updates are turned on.
+@@ -105,7 +105,7 @@
+       Get image descriptions from Google
+     </message>
+     <message name="IDS_SETTINGS_ACCESSIBLE_IMAGE_LABELS_SUBTITLE" desc="Subtitle for screen reader image labels feature.">
+-      If an image doesn’t have a useful description, Chrome will try to provide one for you. To create descriptions, images are sent to Google.
++      If an image doesn’t have a useful description, alula will try to provide one for you. To create descriptions, images are sent to Google.
+     </message>
+     <message name="IDS_SETTINGS_MAIN_NODE_ANNOTATIONS_DOWNLOAD_COMPLETE" desc="Success message when it has downloaded main node annotation files.">
+       Main node annotation files downloaded
+@@ -304,7 +304,7 @@
+       Reset toolbar to default settings
+     </message>
+     <message name="IDS_SETTINGS_CHROME_COLORS" desc="Text of the label describing 'Chrome Colors' theme.">
+-      Chrome Colors
++      alula Colors
+     </message>
+     <message name="IDS_SETTINGS_COLOR_SCHEME_MODE" desc="Text of the label for selecting a color scheme mode for the browser.">
+       Mode
+@@ -394,13 +394,13 @@
+       Google Search in side panel
+     </message>
+     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_IN_CHROME" desc="Label for configuring Google Search side panel alignment.">
+-      Google Search in Chrome
++      Google Search in alula
+     </message>
+     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CONTEXTUAL_TASKS_PANEL" desc="Label for configuring Google Search side panel alignment.">
+       Google Search panel
+     </message>
+     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_CHROME_PANELS" desc="Label for the default Chrome Panels alignment setting.">
+-      Chrome Panels
++      alula Panels
+     </message>
+     <message name="IDS_SETTINGS_SIDE_PANEL_ALIGNMENT_A11Y_LABEL" is_accessibility_with_no_ui="true" desc="Accessible label for side panel alignment dropdown menus, combining the side panel item name and the side panel position category name for screen readers.">
+       <ph name="ITEM_NAME">$1<ex>Google Search AI Mode</ex></ph> <ph name="CATEGORY_NAME">$2<ex>Side panel position</ex></ph>
+@@ -929,16 +929,16 @@
+       Edit in Google Account
+     </message>
+     <message name="IDS_SETTINGS_HOME_AND_WORK_ADDRESS_REMOVE" desc="Label for a context menu item that removes the selected home and work address from Chrome.">
+-      Remove from Chrome
++      Remove from alula
+     </message>
+     <message name="IDS_SETTINGS_HOME_ADDRESS_REMOVE_CONFIRMATION_DIALOG_TITLE" desc="Title for the dialog that asks for confirmation to remove the selected home address from Chrome.">
+-      Remove your home address from Chrome autofill?
++      Remove your home address from alula autofill?
+     </message>
+     <message name="IDS_SETTINGS_WORK_ADDRESS_REMOVE_CONFIRMATION_DIALOG_TITLE" desc="Title for the dialog that asks for confirmation to remove the selected work address from Chrome.">
+-      Remove your work address from Chrome autofill?
++      Remove your work address from alula autofill?
+     </message>
+     <message name="IDS_SETTINGS_NAME_EMAIL_ADDRESS_REMOVE_CONFIRMATION_DIALOG_TITLE" desc="Title for the dialog that asks for confirmation to remove the selected name and email address from Chrome.">
+-      Remove this info from Chrome autofill?
++      Remove this info from alula autofill?
+     </message>
+     <message name="IDS_SETTINGS_HOME_ADDRESS_REMOVE_CONFIRMATION_DIALOG_NOTICE" desc="Body for the dialog that asks for confirmation to remove the selected home address from Chrome.">
+       Your home address can help you get things done across Google services, like more relevant Search results and directions in Google Maps. You can edit or delete your address in your <ph name="BEGIN_LINK">&lt;a href="$1" target=&quot;_blank&quot;&gt;</ph>Google Account<ph name="END_LINK">&lt;/a&gt;</ph> <ph name="USERNAME">$2<ex>example@gmail.com</ex></ph>.
+@@ -1509,10 +1509,10 @@
+       Sites you visit can verify that you're a real person and not a bot
+     </message>
+     <message name="IDS_SETTINGS_ANTI_ABUSE_WHEN_ON_SECTION_ONE" desc="A description that informs users that Chrome saves a small amount of data when the anti-abuse features are enabled.">
+-      A site you visit can save a small amount of info with Chrome, mainly to validate you're not a bot
++      A site you visit can save a small amount of info with alula, mainly to validate you're not a bot
+     </message>
+     <message name="IDS_SETTINGS_ANTI_ABUSE_WHEN_ON_SECTION_TWO" desc="A description that informs users how the anti-abuse features work.">
+-      As you keep browsing, sites can check with Chrome and verify with a previous site you've visited that you're likely a real person
++      As you keep browsing, sites can check with alula and verify with a previous site you've visited that you're likely a real person
+     </message>
+     <message name="IDS_SETTINGS_ANTI_ABUSE_WHEN_ON_SECTION_THREE" desc="A description that informs users how their browsing could be helped by the anti-abuse features.">
+       Browsing is faster because a site is less likely to ask you to verify you're a real person
+@@ -1572,7 +1572,7 @@
+       Web &#38; App Activity
+     </message>
+     <message name="IDS_SETTINGS_PRIVACY_GUIDE_COMPLETION_CARD_AI_SETTINGS_LABEL" desc="Text of the AI Innovations sublabel in the completion card of the 'Privacy Guide'.">
+-      Learn more about how AI shapes your experience and the controls provided by Chrome
++      Learn more about how AI shapes your experience and the controls provided by alula
+     </message>
+     <message name="IDS_SETTINGS_PRIVACY_GUIDE_MSBB_CARD_HEADER" desc="Header of the 'make searches and browsing better' card in the 'Privacy Guide'.">
+       Choose your search and browsing quality
+@@ -1999,10 +1999,10 @@
+       Learn more about resetting settings
+     </message>
+     <message name="IDS_SETTINGS_RESET_AUTOMATED_DIALOG_V2_TITLE" desc="The title of the dialog informing the user that automated resetting of some settings occurred.">
+-      Chrome reset these settings
++      alula reset these settings
+     </message>
+     <message name="IDS_SETTINGS_RESET_AUTOMATED_DIALOG_V2_BODY" desc="The body of the dialog informing the user that automated resetting of some settings occurred.">
+-      These settings were changed from outside of Chrome. To protect you, Chrome reset them.
++      These settings were changed from outside of alula. To protect you, alula reset them.
+     </message>
+     <message name="IDS_SETTINGS_RESET_PINNED_TABS" desc="A string that is used to describe the pinned tabs setting.">
+       Pinned tabs
+@@ -2138,7 +2138,7 @@
+       Site search
+     </message>
+     <message name="IDS_SETTINGS_SEARCH_ENGINES_SITE_SEARCH_EXPLANATION" desc="Explanation for 'Site Search' section. Used interchangeably with IDS_SETTINGS_SEARCH_ENGINES_SITE_SEARCH_EXPLANATION_STARTER_PACK">
+-      To search a specific site or part of Chrome, type its shortcut in the address bar, followed by your preferred keyboard shortcut.
++      To search a specific site or part of alula, type its shortcut in the address bar, followed by your preferred keyboard shortcut.
+     </message>
+     <message name="IDS_SETTINGS_SEARCH_ENGINES_NO_SITES_ADDED" desc="Text shown when the 'Site Search' section is empty">
+       No sites added
+@@ -2153,7 +2153,7 @@
+       Extensions
+     </message>
+     <message name="IDS_SETTINGS_SEARCH_ENGINES_EXTENSION_ENGINES_EXPLANATION" desc="Explanation for a section that displays search engines added by extensions">
+-      Some extensions can add search engines to Chrome
++      Some extensions can add search engines to alula
+     </message>
+     <message name="IDS_SETTINGS_SEARCH_ENGINES_NAME" desc="Label for a table column that holds the name of a search engine or site search provider">
+       Name
+@@ -3061,7 +3061,7 @@
+       Insecure content is blocked by default on secure sites
+     </message>
+     <message name="IDS_SETTINGS_SITE_SETTINGS_PDF_DOWNLOAD_PDFS" desc="Label for downloading PDF documents instead of automatically opening them in Chrome.">
+-      Download PDF files instead of automatically opening them in Chrome
++      Download PDF files instead of automatically opening them in alula
+     </message>
+     <message name="IDS_SETTINGS_SITE_SETTINGS_RECENT_ACTIVITY" desc="Label for the section which contains the user's recent permissions changes">
+       Recent activity
+@@ -3346,7 +3346,7 @@
+       No sites added
+     </message>
+     <message name="IDS_SETTINGS_SITE_SETTINGS_BLOCK_AUTOPLAY" desc="A label for a toggle in site settings to block autoplay. If the toggle is on then Chrome will block autoplay by default and use an algorithm to determine which sites should still be able to autoplay. If the toggle is off then autoplay will be enabled for all sites.">
+-      Let Chrome choose when sites can play sound (recommended)
++      Let alula choose when sites can play sound (recommended)
+     </message>
+     <message name="IDS_SETTINGS_SITE_SETTINGS_EMPTY_ALL_SITES_PAGE" desc="Explanation shown when there are no sites that have appeared yet on the All Sites page.">
+       Sites you visit will appear here
+@@ -3627,7 +3627,7 @@
+       Show profile stats
+     </message>
+     <message name="IDS_SETTINGS_ENCRYPT_WITH_SYNC_PASSPHRASE_LABEL" desc="Label for the radio button which, when selected, causes synced settings to be encrypted with a user-provided password.">
+-      Encrypt synced data with your own <ph name="BEGIN_LINK">&lt;a href="$1" target=&quot;_blank&quot;&gt;<ex>&lt;a href="$1" target=&quot;_blank&quot;&gt;</ex></ph>sync passphrase<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>. Payment methods and addresses from Google Pay won’t be encrypted. Browsing history from Chrome won’t sync.
++      Encrypt synced data with your own <ph name="BEGIN_LINK">&lt;a href="$1" target=&quot;_blank&quot;&gt;<ex>&lt;a href="$1" target=&quot;_blank&quot;&gt;</ex></ph>sync passphrase<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>. Payment methods and addresses from Google Pay won’t be encrypted. Browsing history from alula won’t sync.
+     </message>
+     <message name="IDS_SETTINGS_PASSPHRASE_EXPLANATION_TEXT" desc="Message shown when explicit passphrase is selected.">
+       Only someone with your passphrase can read your encrypted data. The passphrase is not sent to or stored by Google. If you forget your passphrase or want to change this setting, you'll need to <ph name="BEGIN_LINK">&lt;a href="$1" target=&quot;_blank&quot;&gt;<ex>&lt;a href="$1" target=&quot;_blank&quot;&gt;</ex></ph>reset sync<ph name="END_LINK">&lt;/a&gt;<ex>&lt;/a&gt;</ex></ph>.
+@@ -3768,7 +3768,7 @@
+       When you ask questions about your history, you can get answers about specific information from a page you visited
+     </message>
+     <message name="IDS_SETTINGS_HISTORY_SEARCH_WITH_ANSWERS_CONSIDER_DATA_ENCRYPTED" desc="This is a bullet point in the ‘Things to consider’ column, which describes things users should consider about a feature. This string explains that AI features will save data to the user’s device in order to provide the feature’s respective benefit. The data will be appropriately encrypted for security. The tone should be informative.">
+-      As you browse sites, their page contents are encrypted and saved to your device. This may affect Chrome's performance
++      As you browse sites, their page contents are encrypted and saved to your device. This may affect alula's performance
+     </message>
+     <message name="IDS_SETTINGS_HISTORY_SEARCH_WITH_ANSWERS_CONSIDER_OUTDATED" desc="This is a bullet point in the ‘Things to consider’ column, which describes things users should consider about a feature. This string explains that history search results and answers powered by AI may become outdated since they are dependent on the user's last visit to the page contents.">
+       AI-powered history search results and answers may become outdated if site content has changed since your last visit
+@@ -3855,7 +3855,7 @@
+         Use graphics acceleration when available
+       </message>
+       <message name="IDS_SETTINGS_SYSTEM_FEATURE_NOTIFICATIONS_LABEL" desc="Label for the toggle that enables Chrome system notifications about features.">
+-        Show system notifications about Chrome features and tips
++        Show system notifications about alula features and tips
+       </message>
+       <message name="IDS_SETTINGS_SYSTEM_PROXY_SETTINGS_LABEL" desc="Label for the control that opens the system network proxy settings. These settings apply to the entire computer.">
+         Open your computer's proxy settings
+@@ -4171,7 +4171,7 @@
+       Enhanced Safe Browsing is on
+     </message>
+     <message name="IDS_SETTINGS_SAFETY_HUB_SB_ON_ENHANCED_SUBHEADER" desc="Safety Hub settings page (chrome://settings/safetyHub) gives users an overview over their safety status. Safe browsing card in this page shows the current state of Safe browsing setting (chrome://settings/security). This string is the body text of the Safe Browsing card when the current state is Enhanced protection.">
+-      You have Chrome's strongest security
++      You have alula's strongest security
+     </message>
+     <message name="IDS_SETTINGS_SAFETY_HUB_SB_ON_STANDARD_HEADER" desc="Safety Hub settings page (chrome://settings/safetyHub) gives users an overview over their safety status. Safe browsing card in this page shows the current state of Safe browsing setting (chrome://settings/security). This string is the headline of the Safe Browsing card when the current state is Standard protection.">
+       Safe Browsing is on
+@@ -4268,7 +4268,7 @@
+         AI innovations
+       </message>
+       <message name="IDS_SETTINGS_AI_PAGE_TITLE" desc="This label is on the left Navigation sidebar in Chrome’s settings. It tells the user that they can see settings related to AI (artificial intelligence) in this section. It is a noun phrase that refers to our collection of AI settings. These settings include Help me write and more.">
+-        AI in Chrome
++        AI in alula
+       </message>
+       <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_3" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Chrome’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Chrome, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Chrome’s AI features. This bullet point specifically notes that AI features are actively developing and results may include errors. The tone should be informative.">
+         Data sent to Google may be seen by human reviewers to improve Chrome AI’s technology
+@@ -4294,7 +4294,7 @@
+         Automated Password Change
+       </message>
+       <message name="IDS_SETTINGS_PASSWORD_CHANGE_SUBLABEL" desc="Sublabel for password change entry in settings. The description of the feature beneath the “Automated password change” feature title. This and the bullets beneath this paragraph represent the full description of the feature. * “public” does two things: 1) it provides distance between “Chrome” and “data breach”, because we don’t want users to associate the breach with Chrome (Chrome didn’t have a data leak, 2) and related, it might reassure the user to know that Chrome is using public information to establish these lists of compromised passwords. * “Google Password Manager can offer…”: The user has to agree to have this feature update their password for them each time. So Google Password Manager is ‘offering’ to do something for the user.">
+-        If Chrome finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in.
++        If alula finds one of your passwords in a public data breach, Google Password Manager can offer to change your password for you if you're signed in.
+       </message>
+       <message name="IDS_SETTINGS_PASSWORD_CHANGE_DATA_BREACH" desc="Bullet 1 of 2 that appears beneath the “When used” subtitle. This string is repetitive of the feature description, but we want to have a complete description of what happens when the feature is used. * “Google Password Manager asks…”: This part is similar to the general feature description above, but it’s written as if the feature is being used by the user, so we use “asks” and not “can offer”. * “Strong password”: As an existing autofill feature, Google Password Manager can offer to generate and save passwords for the user. These passwords are typically stronger than passwords the user might create on their own">
+         If one of your passwords is found in a data breach, Google Password Manager asks if you want it changed to a strong password
+@@ -4330,7 +4330,7 @@
+ 
+   <!-- Experimental settings strings -->
+   <message name="IDS_SETTINGS_AI_PAGE_MAIN_TITLE" desc="This string is the title of a card that sets the context for the ‘AI innovations’ section of Chrome’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This title is before the ‘Things to consider’ subheading and bullet points. We want users to read this card and understand the considerations that apply to all Chrome’s AI features. The tone should be motivating." formatter_data="android_java">
+-    Reimagine Chrome, supercharged with AI
++    Reimagine alula, supercharged with AI
+   </message>
+   <message name="IDS_SETTINGS_AI_PAGE_MAIN_SUBLABEL_1" desc="This is a bullet point on a card that sets the context for the ‘AI innovations’ section of Chrome’s settings. Here, the user can see settings related to AI (artificial intelligence) in this section; these settings include Help me write and more. This bullet point is after the ‘Reimagine Chrome, supercharged with AI’ title and ‘Things to consider’ subheading. We want users to read this card and understand the considerations that apply to all Chrome’s AI features. This bullet point specifically notes that AI features are actively developing and results may include errors. The tone should be informative." formatter_data="android_java">
+     These features use AI, are in early development, and won’t always get it right
+diff --git a/chrome/app/shared_settings_strings.grdp b/chrome/app/shared_settings_strings.grdp
+index 35ef542fa8..078c10257d 100644
+--- a/chrome/app/shared_settings_strings.grdp
++++ b/chrome/app/shared_settings_strings.grdp
+@@ -101,10 +101,10 @@
+     Supported Live Caption languages
+   </message>
+   <message name="IDS_SETTINGS_CAPTIONS_MANAGE_LANGUAGES_SUBTITLE" desc="Subtitle for the caption settings section for managing language packs.">
+-    Chrome can create and translate captions for the languages shown here
++    alula can create and translate captions for the languages shown here
+   </message>
+   <message name="IDS_SETTINGS_CAPTIONS_MANAGE_LANGUAGES_SUBTITLE_LIVE_CAPTION_ONLY" desc="Subtitle for the caption settings section for managing language packs without live translate.">
+-    Chrome can create captions for the languages shown here
++    alula can create captions for the languages shown here
+   </message>
+   <message name="IDS_SETTINGS_CAPTIONS_LIVE_TRANSLATE_TARGET_LANGUAGE" desc="Description of the target language setting for the Live Translate feature.">
+     Translate captions to
+@@ -240,7 +240,7 @@
+     Enhanced spell check
+   </message>
+   <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF" desc="The label of the checkbox to enable/disable crash and user metrics logging. This string does not need a Chromium counter-part because it will only be visible if Google-branded.">
+-    Help improve Chrome's features and performance
++    Help improve alula's features and performance
+   </message>
+   <message name="IDS_SETTINGS_ENABLE_LOGGING_PREF_DESC" desc="The description of the checkbox to enable/disable crash and user metrics logging">
+     Automatically sends usage statistics and crash reports to Google
+@@ -259,7 +259,7 @@
+     Sync is paused
+   </message>
+   <message name="IDS_SETTINGS_PEOPLE_SIGN_IN_PROMPT" desc="The text displayed to prompt users to sign in to chrome.">
+-    Get Google smarts in Chrome
++    Get Google smarts in alula
+   </message>
+   <message name="IDS_SETTINGS_PEOPLE_SYNC_TURN_OFF" desc="The label for the button that lets the user turn off profile syncing with their gaia account.">
+     Turn off
+diff --git a/chrome/browser/resources/accessibility/accessibility.html b/chrome/browser/resources/accessibility/accessibility.html
+index 4ae674155a..50d5133ce8 100644
+--- a/chrome/browser/resources/accessibility/accessibility.html
++++ b/chrome/browser/resources/accessibility/accessibility.html
+@@ -17,7 +17,7 @@ found in the LICENSE file.
+   <h1>Accessibility Internals</h1>
+   <p>
+     Use this page to inspect the internal representation of accessibility in
+-    Chrome. You can see and modify the various accessibility modes Chrome has.
++    alula. You can see and modify the various accessibility modes alula has.
+     You can also view the accessibility tree for a specific page, or for the
+     Chrome app natively.
+   </p>
+@@ -39,7 +39,7 @@ found in the LICENSE file.
+         </label>
+       </div>
+       <div id="native_secondary" class="secondary">
+-        Allows Chrome to be controlled via native accessibility APIs
++        Allows alula to be controlled via native accessibility APIs
+         specific to this platform.
+       </div>
+ 
+@@ -142,7 +142,7 @@ found in the LICENSE file.
+         applications:
+       </h2>
+       <p>
+-        Accessibility features in Chrome are off by default and enabled
++        Accessibility features in alula are off by default and enabled
+         automatically on-demand.
+       </p>
+       <div class="checkbox-row">
+@@ -170,13 +170,13 @@ found in the LICENSE file.
+         </label>
+       </div>
+       <p>
+-        To force accessibility to be enabled at launch, run Chrome with this
++        To force accessibility to be enabled at launch, run alula with this
+         flag:
+         <pre>--force-renderer-accessibility</pre>
+       </p>
+       <p>
+         To force the accessibility AXMode to one of the predefined bundles, run
+-        Chrome with the --force-renderer-accessibility flag and optional
++        alula with the --force-renderer-accessibility flag and optional
+         argument:
+         <pre>--force-renderer-accessibility=[basic|complete|form-controls]</pre>
+ 
+@@ -184,7 +184,7 @@ found in the LICENSE file.
+         complete.
+       </p>
+       <p>
+-        To disable accessibility, run Chrome with this flag:
++        To disable accessibility, run alula with this flag:
+         <pre>--disable-renderer-accessibility</pre>
+       </p>
+     </div>
+@@ -240,7 +240,7 @@ found in the LICENSE file.
+     </div>
+   </div>
+ 
+-  <h2>Chrome Native UI:</h2>
++  <h2>alula Native UI:</h2>
+   <div id="browsers" class="list">
+     <label>
+       Set a delay, in milliseconds, before getting the native accessibility
+diff --git a/chrome/browser/resources/bluetooth_internals/bluetooth_internals.html b/chrome/browser/resources/bluetooth_internals/bluetooth_internals.html
+index 1b58736526..a2cf6bf8f6 100644
+--- a/chrome/browser/resources/bluetooth_internals/bluetooth_internals.html
++++ b/chrome/browser/resources/bluetooth_internals/bluetooth_internals.html
+@@ -91,14 +91,14 @@
+ </if>
+ 
+ <dialog id="need-location-services-on">
+-  Chrome needs location access to scan for devices. Location access is
++  alula needs location access to scan for devices. Location access is
+   <a id="need-location-services-on-services-link">
+     turned off for this device
+   </a>.
+ </dialog>
+ 
+ <dialog id="need-location-permission-and-services-on">
+-  Chrome needs location access to scan for devices.
++  alula needs location access to scan for devices.
+   <a id="need-location-permission-and-services-on-permission-link">
+     Update permissions
+   </a>. Location access is also
+@@ -108,14 +108,14 @@
+ </dialog>
+ 
+ <dialog id="need-nearby-devices-permission">
+-  Chrome needs permission to scan for nearby devices.
++  alula needs permission to scan for nearby devices.
+   <a id="need-nearby-devices-permission-permission-link">
+     Update permissions
+   </a>.
+ </dialog>
+ 
+ <dialog id="need-location-permission">
+-  Chrome needs location access to scan for devices.
++  alula needs location access to scan for devices.
+   <a id="need-location-permission-permission-link">
+     Update permissions
+   </a>.
+diff --git a/components/components_chromium_strings.grd b/components/components_chromium_strings.grd
+index 154a930642..295d1f7d48 100644
+--- a/components/components_chromium_strings.grd
++++ b/components/components_chromium_strings.grd
+@@ -196,7 +196,7 @@
+       <if expr="not is_android and not is_ios">
+         <message name="IDS_ERRORPAGES_SUGGESTION_NETWORK_PREDICTION_BODY" desc="When a page fails to load, sometimes we suggest disabling predicting network actions.  These are details below a header for non Android devices.">
+           Go to
+-          the Chromium menu &gt;
++          the alula menu &gt;
+           <ph name="SETTINGS_TITLE">&lt;span&gt;$1&lt;/span&gt;<ex>Settings</ex></ph>
+           &gt;
+           <ph name="ADVANCED_TITLE">&lt;span&gt;$2&lt;/span&gt;<ex>Under the Hood</ex></ph>
+@@ -205,12 +205,12 @@
+           again for improved performance.
+         </message>
+         <message name="IDS_ERRORPAGES_SUGGESTION_FIREWALL_CONFIG_HEADER" desc="When a webpage fails to load, in some cases we suggest reconfiguring the firewall.  This is a header above some details.">
+-          Allow Chromium to access the network in your firewall or antivirus
++          Allow alula to access the network in your firewall or antivirus
+           settings.
+         </message>
+       </if>
+       <message name="IDS_ERRORPAGES_SUMMARY_BLOCKED_BY_CLIENT" desc="Summary in the error page when a request is blocked by the browser.">
+-        This page has been blocked by Chromium
++        This page has been blocked by alula
+       </message>
+       <if expr="is_macosx">
+         <message name="IDS_ERRORPAGES_SUGGESTION_PROXY_DISABLE_PLATFORM" desc="macOS instructions for disabling use of a proxy server.">
+@@ -256,7 +256,7 @@
+       <!-- About Flags UI -->
+       <if expr="not is_chromeos">
+         <message name="IDS_FLAGS_UI_RELAUNCH_NOTICE" desc="Notifies the user that they need to relaunch Chromium. Shown next to a button that says 'Relaunch Now'.">
+-          Your changes will take effect the next time you relaunch Chromium.
++          Your changes will take effect the next time you relaunch alula.
+         </message>
+       </if>
+       <if expr="is_chromeos">
+@@ -267,7 +267,7 @@
+ 
+       <!-- chrome://crashes strings -->
+       <message name="IDS_CRASH_DISABLED_MESSAGE" desc="The explanatory message for chrome://crashes when crash reporting is disabled">
+-        Crash reporting is not available in Chromium.
++        Crash reporting is not available in alula.
+       </message>
+ 
+       <!-- Version UI -->
+@@ -276,7 +276,7 @@
+       </message>
+ 
+       <message name="IDS_VERSION_UI_LICENSE" desc="The label below the copyright message, containing the URLs.">
+-        Chromium is made possible by the <ph name="BEGIN_LINK_CHROMIUM">&lt;a target="_blank" href="$1" aria-description="$3"&gt;</ph>Chromium<ph name="END_LINK_CHROMIUM">&lt;/a&gt;</ph> open source project and other <ph name="BEGIN_LINK_OSS">&lt;a target="_blank" href="$2" aria-description="$3"&gt;</ph>open source software<ph name="END_LINK_OSS">&lt;/a&gt;</ph>.
++        alula is made possible by the <ph name="BEGIN_LINK_CHROMIUM">&lt;a target="_blank" href="$1" aria-description="$3"&gt;</ph>Chromium<ph name="END_LINK_CHROMIUM">&lt;/a&gt;</ph> open source project and other <ph name="BEGIN_LINK_OSS">&lt;a target="_blank" href="$2" aria-description="$3"&gt;</ph>open source software<ph name="END_LINK_OSS">&lt;/a&gt;</ph>.
+       </message>
+ 
+       <if expr="is_chromeos">
+@@ -298,19 +298,19 @@
+         </then>
+         <else>
+           <message name="IDS_PAGE_INFO_INTERNAL_PAGE" desc="Message to display in the page info bubble when the page you are on is a chrome:// page or about:something.">
+-            You're viewing a secure Chromium page
++            You're viewing a secure alula page
+           </message>
+         </else>
+       </if>
+ 
+       <!-- Session Crash -->
+       <message name="IDS_SESSION_CRASHED_VIEW_MESSAGE" desc="Message shown when the last session didn't exit cleanly.">
+-        Chromium didn't shut down correctly.
++        alula didn't shut down correctly.
+       </message>
+ 
+       <!-- Device Chooser Prompt -->
+       <message name="IDS_BLUETOOTH_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH" desc="Text shown in the Chooser when browser does not have Bluetooth permission. The '&#10;' is a newline character to force the desired line wrapping.">
+-        Chromium needs Bluetooth access to continue &#10; pairing. <ph name="IDS_BLUETOOTH_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK">$1<ex>Open Preferences</ex></ph>
++        alula needs Bluetooth access to continue &#10; pairing. <ph name="IDS_BLUETOOTH_DEVICE_CHOOSER_AUTHORIZE_BLUETOOTH_LINK">$1<ex>Open Preferences</ex></ph>
+       </message>
+ 
+       <!-- Internal debug pages disabled interstitial. -->

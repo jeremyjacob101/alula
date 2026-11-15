@@ -4,5 +4,5 @@
   "repository": "https://chromium.googlesource.com/chromium/src.git",
   "depot_tools_repository": "https://chromium.googlesource.com/chromium/tools/depot_tools.git",
   "depot_tools_revision": "97da8489e4b7e9dc78fa2efb846871a7b423d933",
-  "patch_commit": "4b969efc98ab492efc648af39be026d6de5e8a7c"
+  "patch_commit": "f0cff0463611f121b84759748d4feb1b5c14d9f8"
 }
