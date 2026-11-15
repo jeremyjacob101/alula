@@ -1,7 +1,7 @@
 From f0cff0463611f121b84759748d4feb1b5c14d9f8 Mon Sep 17 00:00:00 2001
 From: Jeremy Jacob <jeremyjacob101@gmail.com>
 Date: Sat, 14 Nov 2026 18:50:13 +0200
-Subject: [PATCH 2/2] Finish lowercase alula branding in common browser UI
+Subject: [PATCH 2/3] Finish lowercase alula branding in common browser UI
 
 ---
  chrome/app/certificate_manager.grdp           |   2 +-
